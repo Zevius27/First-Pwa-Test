@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World PWA</title>
+
+  <!-- Link to manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Make it standalone on mobile -->
+  <meta name="theme-color" content="#ffffff" />
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+  <h1>Hello World</h1>
+
+  <!-- Register service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  
+
+  </script>
+</body>
+</html>
